@@ -8,4 +8,4 @@ python-pcre
 pandas
 segtok
 spacy
-pypampo.pampo
+./pypampo
