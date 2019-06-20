@@ -1,0 +1,89 @@
+
+{% extends "index.html" %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>About us</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/shop-homepage.css" rel="stylesheet">
+  {% endblock %}
+</head>
+
+<body>
+  {% block nav %}
+  {{ super() }}
+  {% endblock %}
+
+  {% block content %}
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+
+
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="static/images/alipio.png" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Alípio M. Jorge</h5>
+                    <p class="card-text" style="text-align: justify;">Alípio M. Jorge is an associate professor at the Department of Computer Science of the Faculty of Science of the U. Porto and the coordinator of LIAAD/INESC TEC - INESC Technology and cid:8DEFB44D-C005-43C9-8B8C-4FB2D7BB0C54@homeScience, the Artificial Intelligence and Decision Support Lab of U. Porto since 2012. He is PhD in Computer Science by U. Porto. His research interests are Data Mining and Machine Learning, in particular association rules, web intelligence and recommender systems. He lectures on information processing and data mining. He launched the MSc. on Data Analysis and Decision Support Systems, which he coordinated from 2000 to April 2008. He leads research projects on data mining and web intelligence. He co-chaired international conferences (Discovery Science 2009, ECML/PKDD 15 and EPIA 01), workshops and seminars in data mining and artificial intelligence. He was Vice-President of the Portuguese Association for Artificial Intelligence. More in <a class="" role="button" target="_blank" href="http://www.dcc.fc.up.pt/~amjorge">http://www.dcc.fc.up.pt/~amjorge</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row no-gutters">
+                <div class="col-md-4">
+                  <img src="static/images/arian.jpg" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Arian Pasquali</h5>
+                    <p class="card-text" style="text-align: justify;">Arian Pasquali is a researcher associated to University of Porto and the Artificial Intelligence and Decision Support Laboratory at INESC TEC - INESC Technology. He has MSc in Computer Science by University of Porto with specialization in data mining. He has published research in the fields of IR, having been awarded the best short paper award at ECIR'18 (40th International Conference on Information Retrieval). He has also been awarded the 1st prize of the Arquivo.pt Award in 2018 for his project Conta-me Histórias (http://contamehistorias. pt), a project in the field of temporal summarization and web archives. Currently his research interests involve machine learning applied to text mining, in particular information retrieval and natural language processing.
+                      More in <a class="" role="button" target="_blank" href="http://www.dcc.fc.up.pt/~apasquali">http://www.dcc.fc.up.pt/~apasquali</a> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- /.row -->
+
+          </div>
+          <!-- /.col-lg-9 -->
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.container -->
+      {% endblock %}
+      {% block footer %}
+      {{ super() }}
+      {% endblock %}
+
+      <!-- Bootstrap core JavaScript -->
+      <script src="static/vendor/jquery/jquery.min.js"></script>
+      <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+
+    </html>

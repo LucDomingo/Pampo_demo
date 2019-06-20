@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PAMPO DEMO</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/small-business.css" rel="stylesheet">
+  {% endblock %}
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  {% block nav %}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PAMPO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="EntityExtraction">Entity Extractor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/LIAAD/py-pampo">Open Source</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="About">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% endblock %}
+
+  <!-- Page Content -->
+  <div class="container">
+      {% block content %}
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+      <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="static/images/1.png" alt="">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <h1 class="font-weight-light">PAMPO</h1>
+        <p 	style="text-align: justify;">The method, named PAMPO
+       (PAttern Matching and POs tagging based algorithm for NER), relies on flexible pattern
+matching, part-of-speech tagging and lexical-based rules. It was developed to process texts
+written in Portuguese, however it is potentially applicable to other languages as well.
+We compare our approach with current alternatives that support Named Entity Recognition (NER) for content written in Portuguese. These are Alchemy, Zemanta and Rembrandt. Evaluation of the efficacy of the entity extraction method on several texts written
+in Portuguese indicates a considerable improvement on recall and F1 measures.</p>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+
+    <!-- Call to Action Well -->
+    <div class="card text-white bg-secondary my-5 py-4 text-center">
+      <div class="card-body">
+        <h2 class="card-title">Please cite the following works when using PAMPO</h2>
+        <p class="text-white m-0">PAMPO: using pattern matching and pos-tagging for
+effective Named Entities recognition in Portuguese
+Conceic¸ao Rocha ˜ · Al´ıpio Mario Jorge ´ ·
+Roberta Akemi Sionara · Paula Brito · Carlos
+Pimenta · Solange Oliveira Rezende
+</p>
+      </div>
+    </div>
+
+    <!-- Content Row -->
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+ {% endblock %}
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  {% block footer %}
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; PAMPO 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  {% endblock %}
+
+</body>
+
+</html>

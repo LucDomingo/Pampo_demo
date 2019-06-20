@@ -1,3 +1,10 @@
-django
-gunicorn
-django-heroku
+flask
+flask_wtf
+pytest
+click
+nltk
+unidecode
+python-pcre
+pandas
+segtok
+spacy

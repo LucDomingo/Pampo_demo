@@ -1,0 +1,67 @@
+{% set dict_var = {
+ 'text1': 'Fito fora eu juro raca alma na fara. Roda noto juro diga fim sem ides sob. Na se ignorava dezeseis firmenao. Dedicados encontram ceo pao bochechas occultava. Meu resolve arranje ate negocio sou acharao explico. Habitual assignou dor mudancas mae tentaras. Ir ah elleporque parentesco pelintrice conhecedor condemnada silenciosa. Semana figura pes chamou vae embora lar ladrao foi. Respeita bom dirigira arrepios ira figueira exclamou quantias.',
+ 'text2': 'La no apresentas realisacao nobilitado. Decerto mao ficando honrosa levavam teu nervoso. Oh simulados chamasses duvidarei conviccao os. Iii embutidos tem despertar apresento arruinado nao. Lei manha sei jesus porem vasto dia teras outra. Tambem busque nem tochas feitio meu golias nao afinal tem. Cerebro possuir seculos vol remisso por decidir. ',
+ 'text3':'Terra juras ii longa fazia guias ao es detem. Liberdade punhalada ve si reduzidos julgasses emmudecer ja perguntou le. Facil vigor devem si em sahir tu eu. Preceitos ou tu murmurava provincia. Eis limpinhos caprichos despertar ama. Falla sou dao rapaz estas acaso. Adorado um elleque remedio ultimos ou. '
+  }
+ %}
+
+{% extends "index.html" %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block nav %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<form method="post" action="{{ url_for('EntityExtraction') }}">
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select name="comp_select" class="form-control" id="exampleFormControlSelect1">
+      {% for key, value in dict_var.items() %}
+      <option value="{{value}}">{{key}}:{{value}}</option>
+      {% endfor %}
+    </select>
+    <button type="submit" class="btn btn-outline-dark">Submit a demo text</button>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Put your own text</label>
+    <textarea name="area_text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <button type="submit" class="btn btn-outline-dark">Submit your own text</button>
+  </div>
+</form>
+
+{% if post_done %}
+<div class="row">
+{% if select1 %}
+ <div class="col-md-6 mb-5">
+   <div class="card h-100">
+     <div class="card-body">
+       <h2 class="card-title">Result for your Text</h2>
+       <p class="card-text" style="text-align: justify;">{{select1}}</p>
+     </div>
+   </div>
+ </div>
+ {% endif %}
+ {% if select2 %}
+ <div class="col-md-6 mb-5">
+   <div class="card h-100">
+     <div class="card-body">
+       <h2 class="card-title">Result for the demo Text</h2>
+       <p class="card-text" style="text-align: justify;">{{select2}}</p>
+     </div>
+   </div>
+ </div>
+ {% endif %}
+
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+{% block footer %}
+{{ super() }}
+{% endblock %}
