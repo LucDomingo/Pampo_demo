@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from pypampo.pampo import pampo
+from pypampo.pampo.pampo import pampo
 from forms import *
 
 app = Flask(__name__)
