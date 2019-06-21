@@ -6,9 +6,6 @@ from unidecode import unidecode
 import unicodedata
 import sys
 import nltk
-import spacy
-from spacy.lang.pt.examples import sentences
-nlp = spacy.load('pt_core_news_sm')
 
 def split_setences(text):
 	sentences = []
@@ -77,21 +74,10 @@ def extract_entities(text,deduplication=False):
         matchNum = matchNum + 1
 
         phase_0_entities.append(match.group())
-    phase_1_entities = []
-    for token in phase_0_entities:
-	    doc = nlp(token)
-	    prefix_pos=doc[0].pos_
-	    if(prefix_pos in pt_patterns.tags_exclusions):
-		    token=token.replace(doc[0].text,'',1)
-		    doc[0].pos_=''
-	    if(doc[0].pos_=='' and len(doc)>1):
-	        if(doc[1].pos_ in pt_patterns.tags_exclusions):
-		        token=token.replace(doc[1].text,'',1)
-	    if(token.strip()!=''):
-		    phase_1_entities.append(token)
+
 
     unique_tokens = []
-    for token in phase_1_entities:
+    for token in phase_0_entities:
         if(token != '' and len(token) > 2):
             token = token.strip()
             if not(token in pt_patterns.stopwords or token in pt_patterns.preprositions):

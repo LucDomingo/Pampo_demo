@@ -20,8 +20,8 @@ def EntityExtraction():
     if request.method == "GET":
      return render_template('EntityExtractor.html')
     else:
-     select1 = request.form.get('comp_select')
-     select2 = request.form.get('area_text')
+     select1 = pampo.extract_entities(request.form.get('comp_select'))
+     select2 = pampo.extract_entities(request.form.get('area_text'))
      post_done = 1
      return render_template('EntityExtractor.html',post_done=post_done,select1=select1,select2=select2)
 
