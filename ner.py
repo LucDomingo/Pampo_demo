@@ -7,7 +7,7 @@ import unicodedata
 import sys
 import nltk
 import spacy
-import pt-core-news-sm
+import pt_core_news_sm.pt_core_news_sm.pt_core_news_sm
 
 
 def split_setences(text):
