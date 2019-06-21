@@ -7,7 +7,6 @@ import unicodedata
 import sys
 import nltk
 import spacy
-from spacy.lang.pt.examples import sentences
 import pt_core_news_sm
 nlp = pt_core_news_sm.load()
 
