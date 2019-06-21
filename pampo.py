@@ -3,7 +3,6 @@
 import click
 from ner import *
 
-
 @click.command()
 @click.argument('input', type=click.File('rb'))
 def main(input):
