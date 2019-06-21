@@ -7,5 +7,6 @@ unidecode
 python-pcre
 pandas
 segtok
+spacy
 gunicorn
 ./pt_core_news_sm

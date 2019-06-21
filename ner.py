@@ -6,8 +6,8 @@ from unidecode import unidecode
 import unicodedata
 import sys
 import nltk
-import pt-core-news-sm as pt
-nlp = pt.load()
+import spacy
+nlp = pt_core_news_sm.load()
 
 def split_setences(text):
 	sentences = []
