@@ -81,8 +81,6 @@ def extract_entities(text,deduplication=False):
     for token in phase_0_entities:
 	    doc = nlp(token)
 	    prefix_pos=doc[0].pos_
-	    print(doc[0].pos_)
-	    print(doc[0].text)
 	    if(prefix_pos in pt_patterns.tags_exclusions):
 		    token=token.replace(doc[0].text,'',1)
 		    doc[0].pos_=''
@@ -91,7 +89,6 @@ def extract_entities(text,deduplication=False):
 		        token=token.replace(doc[1].text,'',1)
 	    if(token.strip()!=''):
 		    phase_1_entities.append(token)
-    print(phase_1_entities)
 
     unique_tokens = []
     for token in phase_1_entities:
