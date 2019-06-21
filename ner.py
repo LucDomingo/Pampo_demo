@@ -6,7 +6,6 @@ from unidecode import unidecode
 import unicodedata
 import sys
 import nltk
-nltk.data.path.append('./nltk_data/')
 import spacy
 from spacy.lang.pt.examples import sentences
 nlp = spacy.load('pt_core_news_sm')
