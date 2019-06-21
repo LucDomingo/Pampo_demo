@@ -21,6 +21,8 @@ def EntityExtraction():
      return render_template('EntityExtractor.html')
     else:
      select1 = pampo.extract_entities(request.form.get('comp_select'))
+     if select1=="Choose a text":
+         select1=Choose a text
      select2 = pampo.extract_entities(request.form.get('area_text'))
      post_done = 1
      return render_template('EntityExtractor.html',post_done=post_done,select1=select1,select2=select2)
