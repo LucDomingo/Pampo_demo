@@ -6,8 +6,7 @@ from unidecode import unidecode
 import unicodedata
 import sys
 import nltk
-import spacy
-import .pt-core-news-sm as pt
+import pt-core-news-sm as pt
 nlp = pt.load()
 
 def split_setences(text):
