@@ -6,7 +6,6 @@ from unidecode import unidecode
 import unicodedata
 import sys
 import nltk
-import spacy
 import pt_core_news_sm
 nlp = pt_core_news_sm.load()
 
