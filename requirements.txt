@@ -8,3 +8,4 @@ python-pcre
 pandas
 segtok
 spacy
+gunicorn
