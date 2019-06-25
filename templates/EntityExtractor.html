@@ -44,15 +44,31 @@ O Sorriso (este, com maiúsculas) vem sempre de longe. É a manifestação de um
         </select>
         <br>
         <button type="submit" class="btn btn-outline-dark">Submit a demo text</button>
-        {% if post1 %}
         <br>
+        {% if post1 %}
+
         <textarea name="" class="form-control" id="exampleFormControlTextarea1" rows="3">{{original1}}</textarea>
+        {% endif %}
+        {% if select1 %}
+                  <br>
+        <div class="row">
+
+          <div class="col-md-6 mb-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title">Result for the demo text</h2>
+                <p class="card-text" style="text-align: justify;">{{select1}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {% endif %}
     </div>
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
         <br>
         <form method="post" action="{{ url_for('EntityExtraction') }}">
-          {% if not post_done %}
+          {% if not select2 %}
           <textarea name="area_text" class="form-control" id="exampleFormControlTextarea1" rows="3">Write your text here</textarea>
           {% else %}
           <textarea name="area_text" class="form-control" id="exampleFormControlTextarea1" rows="3">{{original2}}</textarea>
@@ -60,6 +76,22 @@ O Sorriso (este, com maiúsculas) vem sempre de longe. É a manifestação de um
           <br>
           <button type="submit" class="btn btn-outline-dark">Submit your own text</button>
         </form>
+                   <br>
+        <div class="row">
+          {% if select2 %}
+          <div class="col-md-6 mb-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title">Result for your text</h2>
+                <p class="card-text" style="text-align: justify;">{{select2}}</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        {% endif %}
       </div>
       </div>
       <br>
@@ -69,32 +101,7 @@ O Sorriso (este, com maiúsculas) vem sempre de longe. É a manifestação de um
 
 
 
-      {% if post_done %}
-      <div class="row">
-        {% if select1 %}
-        <div class="col-md-6 mb-5">
-          <div class="card h-100">
-            <div class="card-body">
-              <h2 class="card-title">Result for the demo text</h2>
-              <p class="card-text" style="text-align: justify;">{{select1}}</p>
-            </div>
-          </div>
-        </div>
-        {% endif %}
-        {% if select2 %}
-        <div class="col-md-6 mb-5">
-          <div class="card h-100">
-            <div class="card-body">
-              <h2 class="card-title">Result for your text</h2>
-              <p class="card-text" style="text-align: justify;">{{select2}}</p>
-            </div>
-          </div>
-        </div>
-        {% endif %}
 
-      </div>
-
-      {% endif %}
 
       {% endblock %}
 
