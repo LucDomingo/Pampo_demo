@@ -1,0 +1,110 @@
+{% set dict_var = {
+  'text1': "A aldeia piscatória de Alvor está situada no estuário do Rio Alvor e apesar da evolução constante do turismo no Algarve, mantém a sua arquitetura baixa e encanto da cidade velha, com ruas estreitas de paralelepípedos que nos levam até à Ria de Alvor, uma das belezas naturais mais impressionantes de Portugal. Há muitos hotéis em Alvor por onde escolher e adequar às exigências das suas férias, quanto a gosto e orçamento, bem como uma série de alojamento autossuficiente para aqueles que preferem ter um pouco mais de liberdade durante a sua estadia na Região de Portimão. Há muito para fazer e descobrir em Alvor, quer seja passar os seus dias descobrindo a rede de ruas desta encantadora vila de pescadores, explorar as lojas, ir para a praia para se divertir entre brincadeiras na areia e mergulhos no mar, ou descobrir a flora e fauna da área classificada da Ria de Alvor. O charme de Alvor não se esgota na Vila. Ficar hospedado em Alvor vai proporcionar-lhe momento mágicos entre paisagens de colinas, lagoas rasas e vistas panorâmicas sobre o Oceano Atlântico. Terá oportunidade de praticar o seu swing num dos campos de golfe de classe mundial e explorar as principais atrações históricas e alguns dos segredos mais bem escondidos do Algarve, nas proximidades, em Portimão e Mexilhoeira Grande. Consulte a lista dos nossos parceiros e escolha o hotel em Alvor, onde ficar durante as suas férias no Algarve.",
+  'text2': "O técnico Tite comandará nesta segunda-feira o primeiro treinamento da Seleção Brasileira visando as partidas contra o Uruguai e Paraguai, nos próximos dias 23 e 28, válidos pela Eliminatórias Sul-Americanas para a Copa da Rússia em 2018. Para esta primeira atividade, o comandante terá apenas 14 dos 23 convocados à disposição. Os demais jogadores chegarão entre a tarde desta segunda-feira e a manhã da terça-feira.   A atividade, que será realizado às 16h (de Brasília)  no CT do Corinthians, contará com as presenças de Marcelo, Casemiro, Ederson, Weverton, Diego, Diego Souza, Fagner, Dudu, Filipe Luís, Willian, Miranda, Paulinho, Gil e Renato Augusto - os dois últimos já treinaram no CT do São Paulo durante a semana passada.   Na chegada ao hotel onde está concentrada a Seleção Brasileira, o meia Renato Augusto, atualmente no Beijing Guoan, explicou quais serão as maiores dificuldades encontradas no duelo contra os uruguaios, fora de casa. 'Será um clima semelhante ao da Libertadores, jogaremos fora de casa, enfrentaremos uma catimba natural, mas não devemos entrar no jogo deles, temos que ficar com a cabeça no lugar e fazer o nosso jogo para poder vencer', analisou o titular.   Tite só terá todos os seus convocados no treino desta terça-feira, que será realizado no CT do São Paulo. Dos nove atletas que ainda irão se juntar aos outros convocados, seis ainda deverão chegar nesta segunda-feira, são eles Marquinhos, Thiago Silva, Fernandinho, Giuliano, Coutinho e Firmino. A convocação estará completa apenas nesta terça-feira, com a chegadas de Neymar, Daniel Alves e Alisson.   Líder das Eliminatórias Sul-Americanas com 27 pontos, a Seleção Brasileira encara o segundo colocado, Uruguai, com 23 pontos, na próxima quinta-feira, às 20h (de Brasília), no estádio Centenário, em Montevidéu. Já no dia 2 de março, a equipe volta a campo para enfrentar o Paraguai, no Estádio de Itaquera, às 21h45.",
+  'text3':"O sorriso, meus amigos, é muito mais do que estas pobres definições, e eu pasmo ao imaginar o autor do dicionário no acto de escrever o seu verbete, assim a frio, como se nunca tivesse sorrido na vida. Por aqui se vê até que ponto o que as pessoas fazem pode diferir do que dizem. Caio em completo devaneio e ponho-me a sonhar um dicionário que desse precisamente, exatamente, o sentido das palavras e transformasse em fio-de-prumo a rede em que, na prática de todos os dias, elas nos envolvem.
+Não há dois sorrisos iguais. Temos o sorriso de troça, o sorriso superior e o seu contrário humilde, o de ternura, o de cepticismo, o amargo e o irónico, o sorriso de esperança, o de condescendência, o deslumbrado, o de embaraço, e (por que não?) o de quem morre. E há muitos mais. Mas nenhum deles é o Sorriso.
+O Sorriso (este, com maiúsculas) vem sempre de longe. É a manifestação de uma sabedoria profunda, não tem nada que ver com as contracções musculares e não cabe numa definição de dicionário. Principia por um leve mover de rosto, às vezes hesitante, por um frémito interior que nasce nas mais secretas camadas do ser. Se move músculos é porque não tem outra maneira de exprimir-se. Mas não terá? Não conhecemos nós sorrisos que são rápidos clarões, como esse brilho súbito e inexplicável que soltam os peixes nas águas fundas? Quando a luz do sol passa sobre os campos ao sabor do vento e da nuvem, que foi que na terra se moveu? E contudo era um sorriso."
+}
+%}
+
+{% extends "index.html" %}
+
+{% block head %}
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+{{ super() }}
+{% endblock %}
+
+{% block nav %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<br>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Samples</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Free input</a>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+
+  <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <br>
+      <form method="post" action="{{ url_for('EntityExtraction') }}">
+        <select name="comp_select" class="form-control" id="exampleFormControlSelect1">
+          <option value="Choose a text">Choose a text</option>
+          {% for key, value in dict_var.items() %}
+          <option value="{{value}}" >{{key}}</option>
+          {% endfor %}
+        </select>
+        <br>
+        <button type="submit" class="btn btn-outline-dark">Submit a demo text</button>
+        <br>
+        {% if post1 %}
+
+        <textarea name="" class="form-control" id="exampleFormControlTextarea1" rows="3">{{original1}}</textarea>
+        {% endif %}
+        {% if select1 %}
+                  <br>
+        <div class="row">
+
+          <div class="col-md-6 mb-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title">Result for the demo text</h2>
+                <p class="card-text" style="text-align: justify;">{{select1}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% endif %}
+    </div>
+      <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <br>
+        <form method="post" action="{{ url_for('EntityExtraction') }}">
+          {% if not select2 %}
+          <textarea name="area_text" class="form-control" id="exampleFormControlTextarea1" rows="3">Write your text here</textarea>
+          {% else %}
+          <textarea name="area_text" class="form-control" id="exampleFormControlTextarea1" rows="3">{{original2}}</textarea>
+          {% endif %}
+          <br>
+          <button type="submit" class="btn btn-outline-dark">Submit your own text</button>
+        </form>
+                   <br>
+        <div class="row">
+          {% if select2 %}
+          <div class="col-md-6 mb-5">
+            <div class="card h-100">
+              <div class="card-body">
+                <h2 class="card-title">Result for your text</h2>
+                <p class="card-text" style="text-align: justify;">{{select2}}</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        {% endif %}
+      </div>
+      </div>
+      <br>
+
+
+
+
+
+
+
+
+      {% endblock %}
+
+      {% block footer %}
+      {{ super() }}
+      {% endblock %}
