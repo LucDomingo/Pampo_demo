@@ -8,5 +8,4 @@ python-pcre
 pandas
 segtok
 gunicorn
-spacy
 ./pt_core_news_sm
